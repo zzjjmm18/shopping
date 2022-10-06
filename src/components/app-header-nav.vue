@@ -1,21 +1,27 @@
 <template>
-    <ul class="app-header-nav">
+  <ul class="app-header-nav">
     <li class="home"><RouterLink to="/">首页</RouterLink></li>
-        <li v-for="item in list" :key="item.id" @mouseenter="show(item)" @mouseleave="hide(item)">
-      <RouterLink :to="`/category/${item.id}`" @click="hide(item)">{{item.name}}</RouterLink>
-      <div class="layer" :class="{open:item.open}">
+    <li
+      v-for="item in list"
+      :key="item.id"
+      @mouseenter="show(item)"
+      @mouseleave="hide(item)"
+    >
+      <RouterLink :to="`/category/${item.id}`" @click="hide(item)">{{
+        item.name
+      }}</RouterLink>
+      <div class="layer" :class="{ open: item.open }">
         <ul>
           <li v-for="sub in item.children" :key="sub.id">
             <RouterLink :to="`/category/sub/${sub.id}`" @click="hide(item)">
-              <img :src="sub.picture" alt="">
-              <p>{{sub.name}}</p>
+              <img :src="sub.picture" alt="" />
+              <p>{{ sub.name }}</p>
             </RouterLink>
           </li>
         </ul>
       </div>
     </li>
   </ul>
-
 </template>
 
 <script>
@@ -37,12 +43,11 @@ export default {
     return { list, show, hide }
   }
 }
-
 </script>
 
-<style scoped lang='less'>
+<style scoped lang="less">
 // 主题
-@xtxColor:#27BA9B;
+@xtxColor: #27ba9b;
 .app-header-nav {
   width: 820px;
   display: flex;
@@ -83,7 +88,7 @@ export default {
   overflow: hidden;
   opacity: 0;
   box-shadow: 0 0 5px #ccc;
-  transition: all .2s .1s;
+  transition: all 0.2s 0.1s;
   ul {
     display: flex;
     flex-wrap: wrap;
