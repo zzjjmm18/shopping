@@ -12,7 +12,7 @@
       <RouterView />
     </div>
     <!-- 底部组件 -->
-     <AppFooter/>
+    <AppFooter/>
   </div>
 </template>
 

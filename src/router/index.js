@@ -1,10 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import TopCategory from '@/views/category'
-import SubCategory from '@/views/category/sub'
-
 const Layout = () => import('@/views/layout')
+
 const Home = () => import('@/views/home')
+const TopCategory = () => import('@/views/category/index')
+const SubCategory = () => import('@/views/category/sub')
+const Goods = () => import('@/views/goods/index')
 
 // 路由规则
 const routes = [
@@ -15,7 +16,8 @@ const routes = [
     children: [
       { path: '/', component: Home },
       { path: '/category/:id', component: TopCategory },
-      { path: '/category/sub/:id', component: SubCategory }
+      { path: '/category/sub/:id', component: SubCategory },
+      { path: '/product/:id', component: Goods }
     ]
   }
 ]
