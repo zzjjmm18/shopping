@@ -5,6 +5,8 @@ import defaultImg from '@/assets/images/200.png'
 // import ShopBread from './shop-bread.vue'
 // import ShopBreadItem from './shop-bread-item.vue'
 
+import Message from './Message'
+
 // context(目录路径，是否加载子目录，加载文件的匹配正则)
 const importFn = require.context('./', false, /\.vue$/)
 
@@ -26,6 +28,9 @@ export default {
 
     // 定义指令
     defineDirective(app) // 图片懒加载
+
+    // 定义一个原型函数
+    app.config.globalProperties.$message = Message
   }
 }
 
