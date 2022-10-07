@@ -3,13 +3,23 @@
   <section class="login-section">
     <div class="wrapper">
       <nav>
-        <a @click="activeName='account'" :class="{active:activeName==='account'}" href="javascript:;">账户登录</a>
-        <a @click="activeName='qrcode'" :class="{active:activeName==='qrcode'}" href="javascript:;">扫码登录</a>
+        <a
+          @click="activeName = 'account'"
+          :class="{ active: activeName === 'account' }"
+          href="javascript:;"
+          >账户登录</a
+        >
+        <a
+          @click="activeName = 'qrcode'"
+          :class="{ active: activeName === 'qrcode' }"
+          href="javascript:;"
+          >扫码登录</a
+        >
       </nav>
       <!-- 帐号登录&扫码登录 -->
-      <LoginForm v-if="activeName==='account'">表单</LoginForm>
-      <div v-if="activeName==='qrcode'" class="qrcode-box">
-        <img src="@/assets/images/qrcode.jpg" alt="">
+      <LoginForm v-if="activeName === 'account'">表单</LoginForm>
+      <div v-if="activeName === 'qrcode'" class="qrcode-box">
+        <img src="@/assets/images/qrcode.jpg" alt="" />
         <p>打开 <a href="javascript:;">小兔鲜App</a> 扫码登录</p>
       </div>
     </div>
@@ -50,8 +60,8 @@ export default {
     position: absolute;
     left: 50%;
     top: 54px;
-    transform: translate3d(100px,0,0);
-    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    transform: translate3d(100px, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     nav {
       height: 55px;
       border-bottom: 1px solid #f5f5f5;
@@ -69,7 +79,7 @@ export default {
           border-right: 1px solid #f5f5f5;
           text-align: left;
         }
-        &.active{
+        &.active {
           color: @xtxColor;
           font-weight: bold;
         }

@@ -30,7 +30,7 @@ export default {
 </script>
 <style scoped lang="less">
 // 主题
-@xtxColor:#27BA9B;
+@xtxColor: #27ba9b;
 .shop-checkbox {
   display: inline-block;
   margin-right: 2px;

@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style scoped lang='less'>
+<style scoped lang="less">
 .login-header {
   background: #fff;
   border-bottom: 1px solid #e4e4e4;
@@ -34,7 +34,8 @@ export default {
       height: 132px;
       width: 100%;
       text-indent: -9999px;
-      background: url(../../../assets/images/logo.png) no-repeat center 18px / contain;
+      background: url(../../../assets/images/logo.png) no-repeat center 18px /
+        contain;
     }
   }
   .sub {
