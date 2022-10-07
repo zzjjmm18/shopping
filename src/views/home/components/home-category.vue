@@ -113,10 +113,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
-// 价格
-@priceColor: #cf4444;
 .home-category {
   width: 250px;
   height: 500px;

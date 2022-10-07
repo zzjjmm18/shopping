@@ -46,8 +46,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
 .app-header-nav {
   width: 820px;
   display: flex;

@@ -38,8 +38,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 辅助
-@helpColor: #e26237;
 .goods-hot {
   h3 {
     height: 70px;

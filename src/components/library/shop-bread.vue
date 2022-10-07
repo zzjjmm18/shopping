@@ -23,8 +23,6 @@ export default {
 </script>
 
 <style lang="less">
-// 主题
-@xtxColor: #27ba9b;
 .shop-bread {
   display: flex;
   padding: 25px 10px;

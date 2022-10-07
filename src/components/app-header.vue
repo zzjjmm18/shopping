@@ -26,11 +26,6 @@ export default {
 </script>
 
 <style scoped lang='less'>
-// 主题
-@xtxColor:#27BA9B;
-// 辅助
-@helpColor:#E26237;
-
 .app-header {
   background: #fff;
   .container {

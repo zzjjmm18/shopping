@@ -67,10 +67,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// 主题
-@xtxColor: #27ba9b;
-// 价格
-@priceColor: #cf4444;
 .goods-name {
   font-size: 22px;
 }

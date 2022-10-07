@@ -34,8 +34,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
 .goods-comment-image {
   .list {
     display: flex;

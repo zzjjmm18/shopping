@@ -146,8 +146,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
 .sku-state-mixin () {
   border: 1px solid #e4e4e4;
   margin-right: 10px;

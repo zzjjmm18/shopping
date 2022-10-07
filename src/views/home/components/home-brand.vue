@@ -52,8 +52,6 @@ export default {
 </script>
 
 <style scoped lang='less'>
-// 主题
-@xtxColor:#27BA9B;
 .skeleton {
   width: 100%;
   display: flex;

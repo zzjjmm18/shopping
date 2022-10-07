@@ -28,10 +28,6 @@ export default {
 </script>
 
 <style scoped lang='less'>
-// 主题
-@xtxColor:#27BA9B;
-// 价格
-@priceColor:#CF4444;
 .goods-item {
   width: 240px;
   height: 300px;

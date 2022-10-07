@@ -39,13 +39,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-.hoverShadow () {
-  transition: all 0.5s;
-  &:hover {
-    transform: translate3d(0, -3px, 0);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  }
-}
 .goods-list {
   display: flex;
   justify-content: space-between;

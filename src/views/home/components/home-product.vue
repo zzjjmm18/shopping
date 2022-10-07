@@ -41,8 +41,6 @@ export default {
 </script>
 
 <style scoped lang='less'>
-// 主题
-@xtxColor:#27BA9B;
 .home-product {
   background: #fff;
   height: 2900px;

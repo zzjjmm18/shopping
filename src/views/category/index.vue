@@ -93,8 +93,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
 .top-category {
   h3 {
     font-size: 28px;

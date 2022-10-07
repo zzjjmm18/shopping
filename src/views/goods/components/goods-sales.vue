@@ -30,10 +30,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
-// 价格
-@priceColor: #cf4444;
 .goods-sales {
   display: flex;
   width: 400px;

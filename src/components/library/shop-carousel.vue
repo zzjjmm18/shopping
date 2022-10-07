@@ -106,8 +106,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 价格
-@priceColor:#CF4444;
 .carousel{
   width: 100%;
   height: 100%;

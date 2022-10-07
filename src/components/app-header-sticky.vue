@@ -36,8 +36,6 @@ export default {
 </script>
 
 <style scoped lang='less'>
-// 主题
-@xtxColor:#27BA9B;
 .app-header-sticky {
   width: 100%;
   height: 80px;

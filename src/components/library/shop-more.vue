@@ -18,8 +18,6 @@ export default {
 </script>
 
 <style scoped lang='less'>
-// 主题
-@xtxColor:#27BA9B;
 .shop-more {
   margin-bottom: 2px;
   span {

@@ -79,8 +79,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
 .goods-image {
   width: 480px;
   height: 400px;

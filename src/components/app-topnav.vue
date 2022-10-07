@@ -47,8 +47,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-// 主题
-@xtxColor:#27BA9B;
 .app-topnav {
   background: #333;
   ul {

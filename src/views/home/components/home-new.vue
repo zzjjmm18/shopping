@@ -44,16 +44,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 鼠标经过上移阴影动画
-.hoverShadow () {
-  transition: all .5s;
-  &:hover {
-    transform: translate3d(0,-3px,0);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  }
-}
-// 价格
-@priceColor:#CF4444;
 .goods-list {
   display: flex;
   justify-content: space-between;

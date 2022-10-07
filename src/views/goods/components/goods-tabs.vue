@@ -35,10 +35,6 @@ export default {
 }
 </script>
 <style scoped lang="less">
-// 主题
-@xtxColor: #27ba9b;
-// 价格
-@priceColor: #cf4444;
 .goods-tabs {
   min-height: 600px;
   background: #fff;
