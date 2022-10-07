@@ -128,7 +128,7 @@ import {
   userMobileLoginMsg
 } from '@/api/user'
 import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useIntervalFn } from '@vueuse/core'
 export default {
   name: 'LoginForm',
@@ -159,7 +159,7 @@ export default {
       isAgree: schema.isAgree
     }
 
-    // 监听isMsgLogin重置表单（数据+清除校验结果）
+    // 监听isMsgLogin重置表单
     const formCom = ref(null)
     watch(isMsgLogin, () => {
       // 重置数据
@@ -168,20 +168,18 @@ export default {
       form.password = null
       form.mobile = null
       form.code = null
-      // 如果是没有销毁Field组件，之前的校验结果是不会清除  例如：v-show切换的
-      // Form组件提供了一个 resetForm 函数清除校验结果
       formCom.value.resetForm()
     })
 
-    // 点击登录时对整体表单进行校验
+    // 点击登录的时候对整体表单进行校验
     const store = useStore()
     const router = useRouter()
+    const route = useRoute()
     const login = async () => {
       const valid = await formCom.value.validate()
       if (valid) {
         try {
           let data = null
-          // 发送请求
           if (isMsgLogin.value) {
             // 手机号登录
             const { mobile, code } = form
@@ -190,7 +188,6 @@ export default {
             // 帐号登录
             const { account, password } = form
             data = await userAccountLogin({ account, password })
-            console.log(data)
           }
           // 存储用户信息
           const { id, account, avatar, mobile, nickname, token } = data.result
@@ -202,11 +199,21 @@ export default {
             nickname,
             token
           })
-          // 进行跳转
-          router.push('/')
-          // 成功消息提示
-          Message({ type: 'success', text: '登录成功' })
-        } catch (e) {}
+          store.dispatch('cart/mergeCart').then(() => {
+            // 进行跳转
+            router.push(route.query.redirectUrl || '/')
+            // 成功消息提示
+            Message({ type: 'success', text: '登录成功' })
+          })
+        } catch (e) {
+          // 失败提示
+          if (e.response.data) {
+            Message({
+              type: 'error',
+              text: e.response.data.message || '登录失败'
+            })
+          }
+        }
       }
     }
 
@@ -238,10 +245,11 @@ export default {
           resume()
         }
       } else {
-        // 失败
+        // 失败显示错误信息
         formCom.value.setFieldError('mobile', valid)
       }
     }
+
     return { isMsgLogin, form, schema: mySchema, formCom, login, send, time }
   }
 }

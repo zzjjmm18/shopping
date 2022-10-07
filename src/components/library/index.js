@@ -6,6 +6,7 @@ import defaultImg from '@/assets/images/200.png'
 // import ShopBreadItem from './shop-bread-item.vue'
 
 import Message from './Message'
+import Confirm from './Confirm'
 
 // context(目录路径，是否加载子目录，加载文件的匹配正则)
 const importFn = require.context('./', false, /\.vue$/)
@@ -31,6 +32,7 @@ export default {
 
     // 定义一个原型函数
     app.config.globalProperties.$message = Message
+    app.config.globalProperties.$confirm = Confirm
   }
 }
 
